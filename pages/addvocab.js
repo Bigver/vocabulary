@@ -17,7 +17,7 @@ const addvocab = () => {
           method: 'POST',
           body: JSON.stringify(values),
         }).then(() => {
-          console.log("เพิ่มคำศัพท์แล้ว")
+          console.log("เพิ่มคำศัพท์แล้วว")
           location.reload()
         }).catch((err) => {
           console.log(err)
