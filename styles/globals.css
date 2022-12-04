@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@500&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.head{
+  display: grid;
+  text-align: center;
+  gap: 1rem;
+
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  margin-top: 20%;
+}
+
+p{
+  display: block;
+  position: relative;
+  bottom: 30px;
+  font-size: 1.5rem;
+}
+
+.vocab-container{
+  position: relative;
+  display:grid;
+  justify-content: center;
+  text-align: center;
+}
+.transltion-container{
+  margin-top: -10%;  
+  position: relative;
+  display:grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.transltion-container .button{
+  font-family: 'Permanent Marker', cursive;
+  width: 160px;
+  height: 100px;
+  z-index: 2;
+  margin-top: 40%;
+  color: white;
+}
+
+.transltion-container .button:hover{
+  opacity: 0;
+}
+
+.transltion-container p{
+  font-family: 'Noto Sans Thai', sans-serif;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  top:45%;
+  margin-left: 40%;
+}
+.add{
+  width: 30px;
+  height: 30px;
+}
+
+.next{
+  display: flex;
+  gap: 6rem;
+  margin-top: 20%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: white;
+  }
+}
+
+
+.content{
+  margin-top: 20%;
+  display: grid;
+  justify-content:center;
+  gap: 5rem;
+}
+
+.addvocab-container{
+  display: grid;
+  text-align: center;
+}
+
+.textbox{
+   margin-top: 20%;
+  display:grid;
+  justify-content:center;
+}
+
+form{
+  display:grid;
+  gap: 2rem;
+  width: 300px;
+  height: 160px;
+}
+input{
+  height: 40px;
+}
+
+.header{
+  position: relative;
+  display: grid;
+  margin-top: 300px;
+}
+
+.book {
+  width: 50px;
+  height: 40px;
+}
+
+.form-submit{
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit input{
+  font-family: 'Permanent Marker', cursive;
+  color: aliceblue;
+  width: 100px;
+  background-color: black;
+}
+
+:root{
+  --width: 200px;
+  --height: 180px;
+}
+
+dubu{
+  margin-top: 30px;
+  margin-left: 20px;
+  z-index: 2;
+  width: var(--width);
+  height: var(--height);
+  background: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: rotate(1deg) translate(-50%, -50%);
+  transform-origin: 0 0;
+  animation-fill-mode: backwards;
+  animation: shake .5s infinite;
+
+  filter: drop-shadow(0 0 0.75rem rgba(169, 109, 173, .3));
+}
+
+dubu:before{
+  content: '';
+  width: calc(var(--width) / 4);
+  height: calc(var(--height) + 15%);
+  background: rgba(230, 230, 230, 1);
+  position: absolute;
+  top: -15%; left: calc((var(--width) / 4) * -1);
+  -webkit-clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 83%);
+  clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 83%);
+  z-index: 99;
+}
+
+dubu:after{
+  content: '';
+  width: calc(var(--width) + (var(--width) / 4));
+  height: 15%;
+  background: rgba(250, 250, 250, 1);
+  position: absolute;
+  top: calc((var(--height) / 4) * -1 + 10%); left: calc(var(--width) / 4 * -1);
+  -webkit-clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 70% 0, 100% 100%, 0 100%);
+}
+
+dubu eyes{
+  width: calc(var(--width) / 3);
+  height: calc(var(--width) / 10);
+  position: absolute;
+  top: 25%; left: 50%;
+  transform: translate(-50%, -25%);
+}
+
+dubu eyes:before{
+  content: '';
+  width: calc(var(--width) / 10);
+  height: calc(var(--width) / 10);
+  position: absolute;
+  left: calc(-1*var(--width) / 10);
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+  transform: rotate(132deg);
+}
+
+dubu eyes:after{
+  content: '';
+  width: calc(var(--width) / 10);
+  height: calc(var(--width) / 10);
+  position: absolute;
+  right: calc(-1*var(--width) / 10);
+  border-top: 5px solid #000;
+  border-left: 5px solid #000;
+  transform: rotate(-47deg);
+}
+
+dubu smile{
+  width: calc(var(--width) * 0.60);
+  height: calc(var(--height) / 10);
+  border: 6px solid #000;
+  border-color: #000 transparent transparent transparent;
+  border-radius: 50%/calc(var(--height) / 10 + 10px) calc(var(--height) / 10) 10px 0;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: scaleY(-1) rotate(3deg) translate(-50%, -50%);
+}
+
+dubu smile:before{
+  content: '';
+  width: calc(var(--width) / 25);
+  height: 5px;
+  background: #000;
+  box-shadow: 0 10px 0 0 #000;
+  position: absolute;
+  top: 200%; left: -10%;
+  transform: rotate(90deg);
+}
+
+
+
+dubu smile:after{
+  content: '';
+  width: calc(var(--width) / 25);
+  height: 5px;
+  background: #000;
+  box-shadow: 0 10px 0 0 #000;
+  position: absolute;
+  top: 200%; right: -10%;
+  transform: rotate(90deg);
+}
+
+dubu shadow{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #f00;
+  position: absolute;
+}
+
+@keyframes shake {
+  0%{ transform: rotate(1deg) translate(-50%, -50%); }
+  50%{ transform: rotate(-1deg) translate(-51%, -50%); }
+  100%{ transform: rotate(1deg) translate(-50%, -50%); }
+}
