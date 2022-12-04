@@ -10,7 +10,7 @@ const addvocab = () => {
         translations: "translations"
       });
 
-      const handleSubmit = async (e) =>{
+      const HandleSubmit = async (e) =>{
         e.preventDefault();
         console.log(values)
         fetch('/api/vocabulary', {
@@ -29,7 +29,7 @@ const addvocab = () => {
   return (
     <div className='addvocab-container' >
         <div className='textbox'>
-            <form className='form' onSubmit={handleSubmit} ref={form}>
+            <form className='form' onSubmit={HandleSubmit} ref={form}>
                 <h1>Vocabulary</h1>
                 <input name="vocabulary"  type="text" onChange={onChange}/>
                 <h1>Translation</h1>
